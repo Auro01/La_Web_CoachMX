@@ -1,1 +1,21 @@
-@import './node_modules/bulma/bulma.sass'
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Customize here
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Import other css
+@import "login";
+
+html {
+    overflow-y: auto;
+}

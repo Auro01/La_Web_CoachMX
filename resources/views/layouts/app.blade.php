@@ -29,14 +29,16 @@
                             <a class="navbar-item" href="{{ route('register') }}">Register</a>
                         @else
                             <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-item has-dropdown">
+                            <a class="navbar-link">
                                 {{ Auth::user()->name }}
                             </a>
                             <div class="navbar-dropdown">
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                    <button class="navbar-item">Logout</button>
-                                </form>
+                                <div class="nabar-item">
+                                    <form vaction="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button class="button is-white">Logout</a>
+                                    </form>
+                                </div>
                             </div>
                         @endguest
                     </ul>
@@ -44,9 +46,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @yield('content')
     </div>
 
     <!-- Scripts -->
