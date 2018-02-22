@@ -34,7 +34,7 @@
                             </a>
                             <div class="navbar-dropdown">
                                 <div class="nabar-item">
-                                    <form vaction="{{ route('logout') }}" method="POST">
+                                    <form location="{{ route('logout') }}" method="POST">
                                         @csrf
                                         <button class="button is-white">Logout</a>
                                     </form>
